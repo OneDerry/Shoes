@@ -1,10 +1,15 @@
-import { prevSlide, nextSlide, dotSlide } from "../../Logic/Slicers/sliderSlice";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import {
+  prevSlide,
+  nextSlide,
+  dotSlide,
+} from "../../Logic/Slicers/sliderSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { sliderData } from "../Data/data";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 
 const Slider = () => {
-  const slideIndex = useSelector((state) => state.slider.value);
+  const slideIndex = useSelector((state: any) => state.slider.value);
   console.log("slideIndex", slideIndex);
   const dispatch = useDispatch();
 

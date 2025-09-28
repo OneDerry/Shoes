@@ -1,13 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import ProductCard from "./ProductCard";
 
 
 const FilteredProducts = () => {
-  const products = useSelector((state) => state.products.FilteredProducts);
-  console.log("products", products);
-  const { type } = useParams();
-  console.log("params", type);
+  const products = useSelector((state: any) => state.products.FilteredProducts);
+  const { type } = useParams<{ type?: string }>();
   return (
     <div>
       <div className="pt-16">
